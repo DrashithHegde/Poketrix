@@ -9,10 +9,27 @@ This project implements a Deep Convolutional Conditional GAN framework using PyT
 * **Adversarial Training:** The two neural networks undergo adversarial training via deep matrix multiplication (with full CUDA/GPU acceleration support), competing mathematically until the Generator learns the underlying data distribution of the traits (e.g., Red + Fire type).
 
 ## 🛠️ Technology Stack
-* **AI / Deep Learning:** PyTorch, Torchvision, CUDA (Hardware Acceleration)
-* **Data Processing:** Pandas, NumPy, Pillow (PIL)
-* **Backend API:** FastAPI, Uvicorn, Python-Multipart
-* **Frontend UI:** React (Vite), Axios, HTML/CSS
+### 🧠 Artificial Intelligence & Deep Learning
+* **PyTorch (v2.1+):** The core deep learning framework used to build and train the mathematical models.
+* **Torchvision:** Used for image transformations and tensor normalizations.
+* **CUDA 12.1:** NVIDIA's parallel computing platform, allowing the neural networks to train rapidly on an RTX 4050 GPU instead of the CPU.
+* **Architecture:** Conditional Generative Adversarial Network (cGAN) utilizing `Conv2d` (Discriminator) and `ConvTranspose2d` (Generator) layers.
+
+### ⚙️ Backend (Python REST API)
+* **FastAPI:** A high-performance Python web framework used to serve the PyTorch model and create the `/generate` and `/detect` endpoints.
+* **Uvicorn:** An ASGI web server implementation used to run the FastAPI application.
+* **Python-Multipart:** Used to handle Form data and file uploads in FastAPI for the image detection endpoint.
+* **Base64 Encoding:** Used to serialize the generated PyTorch image tensors into strings for safe transport to the frontend over HTTP.
+
+### 🎨 Frontend (User Interface)
+* **React.js:** The core JavaScript library used to build the interactive UI components (`GenerateMode.jsx` and `DetectMode.jsx`).
+* **Vite:** The lightning-fast frontend build tool and development server scaffolding the React environment.
+* **Axios:** A promise-based HTTP client used to send requests from React to the FastAPI backend.
+* **CSS3:** Custom Pokédex-themed styling with specific `image-rendering: pixelated` rules to optimally display 64x64 generated images.
+
+### 📊 Data Processing
+* **Pandas & NumPy:** Used to extract and encode the condition data (Pokémon Type and Color) from the Kaggle dataset into 10-dimensional mathematical tensors.
+* **Pillow (PIL):** Python Imaging Library used for decoding, resizing, and inspecting raw image files before converting them into PyTorch tensors.
 
 ## 📂 Project Structure
 ```text
