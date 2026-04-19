@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch / Models
+*.pth
+*.pt
+*.ckpt
+models/
+# Uncomment the line above if you don't want to push your trained models to GitHub (they can be large!)
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env
+
+# Frontend Build Output
+dist/
+dist-ssr/
+build/
+.npm
+
+# System Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,119 @@
+.app {
+    background-color: #ef5350;
+    /* Pokédex Red */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border: 8px solid #c62828;
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    color: #ffeb3b;
+    /* Pokemon Yellow */
+    text-shadow: 2px 2px 0px #3b4cca;
+    /* Pokemon Blue */
+}
+
+.app-header nav {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.app-header nav button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffc107;
+    color: #333;
+    transition: 0.2s;
+    box-shadow: 0 4px #b38800;
+}
+
+.app-header nav button.active {
+    background-color: #2196f3;
+    color: white;
+    box-shadow: 0 4px #0b599e;
+}
+
+.app-header nav button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px #0b599e;
+}
+
+main {
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 15px;
+    color: #333;
+    border: 5px solid #4db6ac;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.generate-mode div,
+.detect-mode div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select,
+input[type="file"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 4px #2e7d32;
+    transition: 0.2s;
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px #2e7d32;
+}
+
+button:disabled {
+    background-color: #9e9e9e;
+    box-shadow: 0 4px #616161;
+    cursor: not-allowed;
+}
+
+img {
+    margin-top: 20px;
+    border: 4px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    image-rendering: auto;
+    /* Softens the 64x64 generation with standard interpolation */
+    width: 256px;
+    height: 256px;
+}
