@@ -2,7 +2,7 @@
 
 **Poketrix** is a full-stack Artificial Intelligence application developed as a coursework assignment. It features a custom-built **Conditional Generative Adversarial Network (cGAN)** that can synthesize novel 64x64 Pokémon images conditioned on specific characteristics (Type and Color) and classify user-uploaded images as real or AI-generated.
 
-## 🧠 AI Architecture (cGAN)
+## AI Architecture (cGAN)
 This project implements a Deep Convolutional Conditional GAN framework using PyTorch:
 * **The Generator** uses transposed convolutional layers (`ConvTranspose2d`) to map a 100-dimensional latent noise vector and a 10-dimensional condition vector into a 64x64x3 RGB image space. 
 * **The Discriminator** uses standard convolutional layers (`Conv2d`) with LeakyReLU activations to downsample the image and condition matrix, calculating a Binary Cross-Entropy (BCE) loss to distinguish between authentic Kaggle Pokémon sprites and synthesized fakes.
@@ -31,7 +31,7 @@ This project implements a Deep Convolutional Conditional GAN framework using PyT
 * **Pandas & NumPy:** Used to extract and encode the condition data (Pokémon Type and Color) from the Kaggle dataset into 10-dimensional mathematical tensors.
 * **Pillow (PIL):** Python Imaging Library used for decoding, resizing, and inspecting raw image files before converting them into PyTorch tensors.
 
-## 📂 Project Structure
+## Project Structure
 ```text
 Poketrix/
 ├── backend/               # Deep learning models and FastAPI server
@@ -45,7 +45,7 @@ Poketrix/
     └── package.json       # Node.js dependencies
 ```
 
-## 🚀 Setup and Installation
+## Setup and Installation
 
 ### 1. Backend & AI Training
 Ensure you have Python 3.12+ installed. If you have an NVIDIA GPU, installing the CUDA-enabled version of PyTorch is highly recommended for faster training.
