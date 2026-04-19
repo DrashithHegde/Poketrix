@@ -1,4 +1,4 @@
-# FastAPI app for Poketrix
+
 
 from fastapi import FastAPI, UploadFile, Form
 from pydantic import BaseModel
