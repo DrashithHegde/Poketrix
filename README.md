@@ -17,15 +17,15 @@ This project implements a Deep Convolutional Conditional GAN framework using PyT
 ## 📂 Project Structure
 ```text
 Poketrix/
-â”œâ”€â”€ backend/               # Deep learning models and FastAPI server
-â”‚   â”œâ”€â”€ data/              # Kaggle Pokemon dataset (images & pokedex.csv)
-â”‚   â”œâ”€â”€ models/            # Neural network architectures (generator.py, discriminator.py)
-â”‚   â”œâ”€â”€ utils/             # Preprocessing logic & data loaders
-â”‚   â”œâ”€â”€ train.py           # The PyTorch adversarial training loop
-â”‚   â””â”€â”€ main.py            # FastAPI endpoints (/generate, /detect)
-â””â”€â”€ frontend/              # The React PokÃ©dex User Interface
-    â”œâ”€â”€ src/               # React components (GenerateMode.jsx, DetectMode.jsx)
-    â””â”€â”€ package.json       # Node.js dependencies
+├── backend/               # Deep learning models and FastAPI server
+│   ├── data/              # Kaggle Pokemon dataset (images & pokedex.csv)
+│   ├── models/            # Neural network architectures (generator.py, discriminator.py)
+│   ├── utils/             # Preprocessing logic & data loaders
+│   ├── train.py           # The PyTorch adversarial training loop
+│   └── main.py            # FastAPI endpoints (/generate, /detect)
+└── frontend/              # The React Pokédex User Interface
+    ├── src/               # React components (GenerateMode.jsx, DetectMode.jsx)
+    └── package.json       # Node.js dependencies
 ```
 
 ## 🚀 Setup and Installation
