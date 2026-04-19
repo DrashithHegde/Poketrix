@@ -83,6 +83,6 @@ Once both servers are running, access the web UI:
 1. **Generate Mode:** Select a Pokémon Type (e.g., Fire, Water) and a Primary Color. The backend will sample a random noise vector, concatenate the condition vector, and perform inference through the Generator to create a new Pokémon. The Discriminator evaluates the result in real-time, providing a "Real vs. Fake" confidence probability.
 2. **Detect Mode:** Upload an external image. The image is passed through the normalization preprocessing pipeline and fed to the Discriminator for binary classification.
 
-## 📝 Academic Notes & Limitations
+## Academic Notes & Limitations
 * **Resolution Constraint:** The model outputs `64x64` images. This constraint was purposefully chosen to maintain a rapid feedback loop and ensure the model could finish training locally on consumer hardware (RTX 4050) within a tight time frame. Super-resolution (e.g., `256x256`) would simply require expanding the convolutional block depth and increasing the epoch count.
 * **Epochs:** Training is currently capped at 50 epochs to prevent local machine overheating while still clearly demonstrating functional adversarial convergence.
