@@ -78,7 +78,7 @@ npm run dev
 ```
 *The dashboard will compile and be accessible at `http://localhost:5173`*
 
-## 🎮 Usage
+## Usage
 Once both servers are running, access the web UI:
 1. **Generate Mode:** Select a Pokémon Type (e.g., Fire, Water) and a Primary Color. The backend will sample a random noise vector, concatenate the condition vector, and perform inference through the Generator to create a new Pokémon. The Discriminator evaluates the result in real-time, providing a "Real vs. Fake" confidence probability.
 2. **Detect Mode:** Upload an external image. The image is passed through the normalization preprocessing pipeline and fed to the Discriminator for binary classification.
