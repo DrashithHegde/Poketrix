@@ -2,19 +2,19 @@
 
 **Poketrix** is a full-stack Artificial Intelligence application developed as a coursework assignment. It features a custom-built **Conditional Generative Adversarial Network (cGAN)** that can synthesize novel 64x64 Pokémon images conditioned on specific characteristics (Type and Color) and classify user-uploaded images as real or AI-generated.
 
-## 🧠 AI Architecture (cGAN)
+## AI Architecture (cGAN)
 This project implements a Deep Convolutional Conditional GAN framework using PyTorch:
 * **The Generator** uses transposed convolutional layers (`ConvTranspose2d`) to map a 100-dimensional latent noise vector and a 10-dimensional condition vector into a 64x64x3 RGB image space. 
 * **The Discriminator** uses standard convolutional layers (`Conv2d`) with LeakyReLU activations to downsample the image and condition matrix, calculating a Binary Cross-Entropy (BCE) loss to distinguish between authentic Kaggle Pokémon sprites and synthesized fakes.
 * **Adversarial Training:** The two neural networks undergo adversarial training via deep matrix multiplication (with full CUDA/GPU acceleration support), competing mathematically until the Generator learns the underlying data distribution of the traits (e.g., Red + Fire type).
 
-## 🛠️ Technology Stack
+## Technology Stack
 * **AI / Deep Learning:** PyTorch, Torchvision, CUDA (Hardware Acceleration)
 * **Data Processing:** Pandas, NumPy, Pillow (PIL)
 * **Backend API:** FastAPI, Uvicorn, Python-Multipart
 * **Frontend UI:** React (Vite), Axios, HTML/CSS
 
-## 📂 Project Structure
+## Project Structure
 ```text
 Poketrix/
 ├── backend/               # Deep learning models and FastAPI server
@@ -28,7 +28,7 @@ Poketrix/
     └── package.json       # Node.js dependencies
 ```
 
-## 🚀 Setup and Installation
+## Setup and Installation
 
 ### 1. Backend & AI Training
 Ensure you have Python 3.12+ installed. If you have an NVIDIA GPU, installing the CUDA-enabled version of PyTorch is highly recommended for faster training.
